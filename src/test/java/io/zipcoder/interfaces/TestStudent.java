@@ -4,11 +4,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestStudent {
-    private Student student;
+    private Student student = new Student("Delon", 3);
 
     @Test
     public void testInheritance(){
-        Student student = new Student();
+        Student student = new Student("Ranny", 2);
 
         boolean outcome = student instanceof Person;
 
@@ -17,7 +17,7 @@ public class TestStudent {
 
     @Test
     public void testImplementation(){
-        Learner student = (Learner)(Object) new Student();
+        Learner student = (Learner)(Object) new Student("Tara", 1);
 
         Assert.assertTrue(student instanceof Learner);
     }
