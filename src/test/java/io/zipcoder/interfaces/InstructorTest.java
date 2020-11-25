@@ -37,15 +37,17 @@ public class InstructorTest {
 
     @Test
     public void testLecture(){
-        //Given
-        Instructor instructor = new Instructor("Mr. Robinson", 103);
-        Student[] students = new Student[5];
-        Double expNumOfHours = 50.0;
-        Double expectedTotal = students.length/expNumOfHours;
-        instructor.lecture(students, expNumOfHours);
-        Double actualTotal = student.getTotalStudyTime();
-
-        Assert.assertEquals(actualTotal, expectedTotal);
+        Instructor instructor = new Instructor("Mr. Scott", 1);
+        Student student1 = new Student("Sally", 2);
+        Student student2 = new Student("Manny", 3);
+        Student student3 = new Student("Tom", 4);
+        Student[] students = new Student[3];
+        students[0] = student1;
+        students[1] = student2;
+        students[2] = student3;
+        double expected = 0 + 10;
+        instructor.lecture(students, 30);
+        double actual = student1.getTotalStudyTime();
 
 
         }

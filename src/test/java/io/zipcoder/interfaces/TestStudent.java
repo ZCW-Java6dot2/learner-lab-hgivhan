@@ -24,11 +24,11 @@ public class TestStudent {
 
     @Test
     public void testLearn(){
-        Double expectedTotal = 20.0;
+        double expectedTotal = 20.0;
         student.learn(20.0);
-        Double actualTotal = student.getTotalStudyTime();
+        double actualTotal = student.getTotalStudyTime();
 
-        Assert.assertEquals(expectedTotal, actualTotal);
+        Assert.assertEquals(expectedTotal, actualTotal, .001);
 
     }
 
