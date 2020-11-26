@@ -1,14 +1,15 @@
 package io.zipcoder.interfaces;
 
-public class Instructors extends People{
-    private static final Person instance = new Person();
+public final class Instructors extends People{
+    private static final Instructors instance = new Instructors();
 
     private Instructors(){
-        // how to fill instance with Student rep of colleagues.. arraylist?
-        //each student should have relatively unique id.
+        add(new Instructor("Dolio", 1));
+        add(new Instructor("Nobles", 2));
+        add(new Instructor("Kris", 3));
     }
 
-    public Person getInstance(){
+    public static Instructors getInstance(){
         return instance;
     }
 }

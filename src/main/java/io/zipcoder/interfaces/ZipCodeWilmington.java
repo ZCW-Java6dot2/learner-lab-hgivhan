@@ -2,21 +2,25 @@ package io.zipcoder.interfaces;
 
 import java.util.Map;
 
-public class ZipCodeWilmington {
-    public Students students;
-    public Instructors instructors;
+public final class ZipCodeWilmington {
+    public Students students = Students.getInstance();
+    public Instructors instructors = Instructors.getInstance();
 
     private ZipCodeWilmington() {
-        // how to fill instance with Student rep of colleagues.. arraylist?
-        //each student should have relatively unique id.
     }
 
-    public void hostLecture(Teacher teacher, double numOfHours) {
+    public static void hostLecture(Teacher teacher, double numOfHours) {
+        //tengo un metodo "lecture" en la clase instructor
+        //Teacher es un interface teacher.lecture(...,numOfHours); .. asi?
+        //uso los parametros para darle una lectura al grupito(personList)
+        //que he hecho en la clase singleton de estudiantes (en el constructor)
         //make use of a Teacher teacher, double numberOfHours parameter
         // to host a lecture to the composite personList field in the students reference.
     }
 
-    public void hostLectureInstructor(long id, double numOfHours) {
+    public static void hostLectureInstructor(long id, double numOfHours) {
+        Instructor instructor = new Instructor();
+
         // makes use of a long id,
         // double numberOfHours parameter to identify a respective Instructor to
         // host a lecture to the composite personList field in the students reference.
