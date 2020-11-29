@@ -14,6 +14,11 @@ public class Person {
         id = 0;
     }
 
+    public Person(String name) {
+        this.name = name;
+        this.id = 0;
+    }
+
     public long getId(){
         return id;
     }

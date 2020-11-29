@@ -6,6 +6,10 @@ public class Instructor extends Person implements Teacher {
         super(name, id);
     }
 
+    public Instructor(String name){
+        super(name);
+    }
+
 
     public void teach(Student student, double numOfHours) {
         student.learn(numOfHours);

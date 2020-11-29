@@ -48,6 +48,7 @@ public class InstructorTest {
         double expected = 0 + 10;
         instructor.lecture(students, 30);
         double actual = student1.getTotalStudyTime();
+        assertEquals(expected, actual, .001);
 
 
         }
